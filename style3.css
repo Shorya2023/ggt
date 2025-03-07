@@ -1,0 +1,32 @@
+/* style.css */
+body {
+    background-color: blueviolet;
+    overflow: hidden;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Runner container */
+.runner {
+    position: absolute;
+    bottom: 50px;
+    left: -100px;
+    width: 80px;
+    height: 80px;
+    background-image: url('https://i.gifer.com/origin/69/6938a27cfcff7f6e8e32a6d41ff515c6_w200.gif');
+    background-size: cover;
+    animation: run-cycle 5s linear infinite;
+}
+
+/* Running animation */
+@keyframes run-cycle {
+    0% {
+        left: -100px;
+    }
+    100% {
+        left: 100vw;
+    }
+}
