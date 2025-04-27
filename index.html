@@ -95,21 +95,30 @@
 <!-- Stars container (JS will fill it) -->
 <div id="stars-container"></div>
 
+
+<!-- Navigation Bar -->
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About Us</a>
+    <a href="#">What We Do</a>
+    <a href="#">Careers</a>
+  </nav>
+  
 <!-- Content -->
 <div class="content">
     <img src="C:\Users\lenovo\Downloads\MyPhoto.jpg" alt="Person Image">
-    <h1>Hello, I am Shorya, updated GitHub now code</h1>
+    <h1>Hello, I am Shorya, SSE </h1>
   <h2>Staying in Dubai</h2>
   <h2>Near Bur Dubai</h2>
   <h2>Working for ENBD</h2>
-  <h5>Bhopal</h5>
+  <h3>Originally from Bhopal, India </h3>
   <button>Contact Me</button>
 </div>
 
 <!-- JavaScript for creating stars -->
 <script>
   const starsContainer = document.getElementById('stars-container');
-  for (let i = 0; i < 100; i++) { // You can increase number of stars here
+  for (let i = 0; i < 50; i++) { // You can increase number of stars here
     const star = document.createElement('div');
     star.classList.add('stars');
     star.style.top = Math.random() * 100 + 'vh';
