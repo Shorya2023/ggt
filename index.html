@@ -2,25 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Line by Line Animation-My INfo</title>
+  <title>Profile Animation</title>
   <style>
     body {
       background: #f0f0f0;
       font-family: Arial, sans-serif;
       padding: 20px;
+      text-align: center;
     }
 
-    h1, h2, h5 {
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 0s;
+    }
+
+    h1, h2, h5, button {
       opacity: 0;
       transform: translateY(20px);
       animation: fadeIn 1s forwards;
     }
 
-    h1 { animation-delay: 0s; }
-    h2:nth-of-type(1) { animation-delay: 2s; }
-    h2:nth-of-type(2) { animation-delay: 4s; }
-    h2:nth-of-type(3) { animation-delay: 6s; }
-    h5 { animation-delay: 8s; }
+    h1 { animation-delay: 1s; }
+    h2:nth-of-type(1) { animation-delay: 3s; }
+    h2:nth-of-type(2) { animation-delay: 5s; }
+    h2:nth-of-type(3) { animation-delay: 7s; }
+    h5 { animation-delay: 9s; }
+    button { animation-delay: 11s; }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
 
     @keyframes fadeIn {
       to {
@@ -32,11 +61,18 @@
 </head>
 <body>
 
-<h1>Hello, I am Shorya, updated GitHub now code</h1>
+<!-- Person Image -->
+<img src="C:\Users\lenovo\Downloads\MyPhoto.jpg" alt="Person Image">
+
+<!-- Lines -->
+<h1>Hello, I am Shorya, working as a senior software engg</h1>
 <h2>Staying in Dubai</h2>
 <h2>Near Bur Dubai</h2>
 <h2>Working for ENBD</h2>
-<h3>Thats it as of now </h3>
+<h5>Bhopal</h5>
+
+<!-- Button -->
+<button>Contact Me</button>
 
 </body>
 </html>
