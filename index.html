@@ -2,13 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Profile Animation</title>
+  <title>Star Background</title>
   <style>
     body {
-      background: #f0f0f0;
+      margin: 0;
+      overflow: hidden;
+      background: black;
       font-family: Arial, sans-serif;
-      padding: 20px;
+      color: white;
       text-align: center;
+      position: relative;
+      height: 100vh;
+    }
+
+    .stars {
+      width: 2px;
+      height: 2px;
+      background: white;
+      position: absolute;
+      border-radius: 50%;
+      animation: moveStars linear infinite;
+    }
+
+    /* Keyframes for star movement */
+    @keyframes moveStars {
+      0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) translateX(50vw);
+        opacity: 0;
+      }
+    }
+
+    /* Content (Image, Text, Button) */
+    .content {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
     }
 
     img {
@@ -17,9 +50,7 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 20px;
-      opacity: 0;
       animation: fadeIn 1s forwards;
-      animation-delay: 0s;
     }
 
     h1, h2, h5, button {
@@ -61,18 +92,32 @@
 </head>
 <body>
 
-<!-- Person Image -->
-<img src="C:\Users\lenovo\Downloads\MyPhoto.jpg" alt="Person Image">
+<!-- Stars container (JS will fill it) -->
+<div id="stars-container"></div>
 
-<!-- Lines -->
-<h1>Hello, I am Shorya, working as a senior software engg</h1>
-<h2>Staying in Dubai</h2>
-<h2>Near Bur Dubai</h2>
-<h2>Working for ENBD</h2>
-<h5>Bhopal</h5>
+<!-- Content -->
+<div class="content">
+    <img src="C:\Users\lenovo\Downloads\MyPhoto.jpg" alt="Person Image">
+    <h1>Hello, I am Shorya, updated GitHub now code</h1>
+  <h2>Staying in Dubai</h2>
+  <h2>Near Bur Dubai</h2>
+  <h2>Working for ENBD</h2>
+  <h5>Bhopal</h5>
+  <button>Contact Me</button>
+</div>
 
-<!-- Button -->
-<button>Contact Me</button>
+<!-- JavaScript for creating stars -->
+<script>
+  const starsContainer = document.getElementById('stars-container');
+  for (let i = 0; i < 100; i++) { // You can increase number of stars here
+    const star = document.createElement('div');
+    star.classList.add('stars');
+    star.style.top = Math.random() * 100 + 'vh';
+    star.style.left = Math.random() * 100 + 'vw';
+    star.style.animationDuration = (2 + Math.random() * 5) + 's';
+    starsContainer.appendChild(star);
+  }
+</script>
 
 </body>
 </html>
